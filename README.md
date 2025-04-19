@@ -22,7 +22,7 @@
         ├── settings.js
         └── treeblocks.js
   ```
-  This shellscript takes in a pathname as a parameter and searches for occurrences of `/[cC]ode/src/.*\.js` and minifies them to `/[cC]ode/exe/.*\.js`, curtesy of the [Toptal JS-Minifier API](https://www.toptal.com/developers/javascript-minifier/documentation/curl)
+  This shellscript takes in a pathname as a parameter and searches for occurrences of `/[cC]ode/src/.*\.js` and minifies them to `/[cC]ode/exe/.*\.js`, courtesy of the [Toptal JS-Minifier API](https://www.toptal.com/developers/javascript-minifier/documentation/curl)
 
  # Usage
   Simply provide a path as the parameter during execution
