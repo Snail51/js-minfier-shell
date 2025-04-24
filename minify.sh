@@ -8,6 +8,8 @@ files=$(find $root -path "*/[cC]ode/src/*.js")
 now=$(date)
 
 for file in $files; do
+    sleep 3; # wait three seconds as to not overwhelm the API-- will return `error code: 1015` if rate limit is exceeded
+
     # gather relevant info
     source_path=$(realpath "$file")
     source_file=$(basename "$source_path")
@@ -28,5 +30,7 @@ for file in $files; do
 
     # print to console
     echo "Minified \`${source_path}\` ---> \`${output_file}\`"
-    sleep 3; # wait three seconds as to not overwhelm the API-- will return `error code: 1015` if rate limit is exceeded
 done
+
+echo "Minification Complete"
+echo -en "\a" # ring the command line bell
